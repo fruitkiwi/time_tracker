@@ -1,0 +1,167 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.231;
+}
+@font-face {
+  font-family: 'fa';
+  src: url('../font/fa.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+#wrapper {
+  width: 1200px;
+  margin: 3rem auto;
+  min-height: 4rem;
+}
+/* Task add */
+.task-table__add {
+  display: table;
+  table-layout: fixed;
+  margin-bottom: 3rem;
+}
+.task-table__add__column {
+  display: table-cell;
+  vertical-align: bottom;
+}
+.task-table__add__column:not(:last-of-type) {
+  padding-right: 2em;
+}
+.task-table__add__column--first, .task-table__add__column--second {
+  width: 30%;
+}
+.task-table__add__column--third {
+  width: 10%;
+}
+.task-table__add__column--forth {
+  width: 5%;
+}
+.task-table__add__column--fifth {
+  width: 25%;
+}
+.task-table__add__column--forth, .task-table__add__column--fifth {
+  padding-bottom: 11px;
+}
+.task-table__add__column label {
+  font-size: 0.8em;
+  color: grey;
+  display: block;
+  margin-bottom: 0.5em;
+}
+/* Task */
+.task-table__task {
+  width: 100%;
+  min-height: 4rem;
+  padding: 1.5rem;
+  background-color: white;
+  border: 1px solid #BDBDBD;
+  border-radius: 4px;
+  display: table;
+  table-layout: fixed;
+  word-wrap: break-word;
+  position: relative;
+  box-sizing: border-box;
+}
+.task-table__task:not(:last-of-type) {
+  margin-bottom: 2em;
+}
+.task-table__task__edit {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+.task-table__task__edit::after {
+  font-family: 'fa';
+  content: '\e802';
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: default;
+}
+.task-table__task__edit--confirm::after {
+  content: 'OK';
+}
+.task-table__task__edit:hover, .task-table__task__remove:hover {
+  color: mediumseagreen;
+}
+.task-table__task__remove {
+  position: absolute;
+  top: 0;
+  left: 5px;
+}
+.task-table__task__remove::after {
+  font-family: 'fa';
+  content: '\e803';
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: default;
+}
+.task-table__task__column {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 40px;
+}
+.task-table__task__column--first {
+  width: 40%;
+}
+.task-table__task__column--second {
+  width: 20%;
+  padding-left: 3em;
+}
+.task-table__task__column--third {
+  width: 20%;
+}
+.task-table__task__column--forth {
+  width: 20%;
+}
+.task-table__task__timer {
+  position: relative;
+}
+.task-table__task__timer--play::before, .task-table__task__timer--pause::before {
+  font-family: 'fa';
+  font-size: 2em;
+  vertical-align: middle;
+  position: absolute;
+  top: -0.3em;
+  left: -1.5em;
+  cursor: default;
+}
+.task-table__task__timer--play::before {
+  content: '\e800';
+}
+.task-table__task__timer--pause::before {
+  content: '\e801';
+}
+/* Common */
+.button {
+  background: none;
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid black;
+  font-family: inherit;
+}
+.text-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid black;
+  font-family: inherit;
+}
+.span-emul {
+  padding-left: 11px;
+}
+.button:focus, .text-input:focus {
+  outline: none;
+  border-color: gold;
+  box-shadow: 0 0 2px gold;
+} 
+.action-link {
+  border-bottom: 1px dotted black;
+  cursor: default;
+}
+.action-link:hover, .button:hover:not(:focus) {
+  color: mediumseagreen;
+  border-color: mediumseagreen;
+}
